@@ -110,6 +110,7 @@ ip netns exec testns bash
 ![excex-testns.png](./img/excex-testns.png)
 
 ip a
+
 Формально к нашему switch подключаеться ноутбук
 
 При этом мы остаемся в своей хостовой системе
@@ -122,31 +123,39 @@ ps aux
 
 Мы изолированы только в сетевом пространстве имен.
 
-### ip nets help
+### ip netns help
 
 получим смисок команд
 
-### ip nets add testns
+### ip netns add testns
 
 добавим новый интерфейс testns
 
-### ip nets exec testns bash
+### ip netns exec testns bash
 
 зашли внутрь изолированной среды этого сетевого интерфейса
 
 ### ip a
 
 Видим единственный сетевой интерфейс
+
 lo0, localhost
+
 у нас нет доступа к другим сетевым интерфейсам хостовой системы
 
 ### ps aux
 
 видим список всех процессов хостовой системы, здесь нет изоляции
 
-### ip nets delete testns
+### ip netns delete testns
 
 удалим созданный тестовый изолированный сетевой интерфейс
+
+### rm -r testfolder/
+
+удалим тестовую папку
+
+![](./img/delete-test.png)
 
 ## Изоляция сети и процессов
 
@@ -163,6 +172,8 @@ lo0, localhost
 
 -mount-proc — разграничивает процессы
 
+![unshare.png](./img/unshare.png)
+
 ### ps aux
 
 процессы и правда изолированны
@@ -177,4 +188,4 @@ lo0, localhost
 
 ### ls /
 
-мы внутри контейнера
+мы внутри контейнера и видим все файлы
