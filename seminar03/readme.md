@@ -4,43 +4,61 @@
 
 Обновите списки пакетов:
 
+```bash
 sudo apt update
+```
 
 Установите пакеты, которые позволят использовать репозиторий по HTTPS:
 
+```bash
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
+```
 
 Добавьте официальный GPG-ключ Docker:
 
+```bash
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+```
 
 Для других дистрибутивов, замените URL на соответствующий.
 
 Добавьте репозиторий Docker к списку источников пакетов:
 
+```bash
 echo "deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
 
 Обновите список пакетов, чтобы включить информацию о пакетах Docker из добавленного репозитория:
 
+```bash
 sudo apt update
+```
 
 ![docker-repo.png](./img/docker-repo.png)
 
 Установите Docker:
 
+```bash
 sudo apt install docker-ce
+```
 
 Добавьте вашего пользователя в группу docker, чтобы избежать использования sudo для запуска Docker команд:
 
+```bash
 sudo usermod -aG docker $USER
+```
 
 Перезагрузите систему или запустите следующую команду, чтобы применить изменения в текущем сеансе:
 
+```bash
 newgrp docker
+```
 
 Теперь вы должны быть готовы использовать Docker через терминал. Вы можете проверить его работу, выполнив команду:
 
+```bash
 docker --version
+```
 
 ![docker-installed](./img/docker-installed.png)
 
@@ -48,7 +66,10 @@ docker --version
 
 Запустите контейнер с использованием образа "cowsay". Команда будет выглядеть так:
 
+```bash
 docker run docker/whalesay cowsay Hello, Docker!
+```
+
 В данном примере используется образ "docker/whalesay", который содержит утилиту "cowsay". Он будет выводить на экран сообщение "Hello, Docker!" с помощью рисунка кита.
 
 ![whole](./img/whole.png)
@@ -57,21 +78,29 @@ docker run docker/whalesay cowsay Hello, Docker!
 
 Запустить контейнер с рисунком слона:
 
+```bash
 docker run docker/whalesay cowsay -f elephant Hello, Docker!
+```
 
 Запустить контейнер с рисунком пингвина:
 
+```bash
 docker run docker/whalesay cowsay -f tux Hello, Docker!
+```
 
 ![elephant.png](./img/elephant.png)
 
 Запустить контейнер с рисунком дракона:
 
+```bash
 docker run docker/whalesay cowsay -f dragon Hello, Docker!
+```
 
 Запустить контейнер с рисунком кота:
 
+```bash
 docker run docker/whalesay cowsay -f kitty Hello, Docker!
+```
 
 ![kitty.png](./img/kitty.png)
 
@@ -81,24 +110,33 @@ docker run docker/whalesay cowsay -f kitty Hello, Docker!
 
 Создание и запуск контейнеров:
 
-docker run: Запускает контейнер из образа.
-docker start: Запускает остановленный контейнер.
-docker stop: Останавливает работающий контейнер.
-docker restart: Перезапускает контейнер.
-docker exec: Выполняет команду внутри запущенного контейнера.
-Управление контейнерами:
-docker rm $(docker ps -aq): удалит все остановленные контейнеры
+```bash
+docker run # Запускает контейнер из образа.
+docker start # Запускает остановленный контейнер.
+docker stop # Останавливает работающий контейнер.
+docker restart # Перезапускает контейнер.
+docker exec # Выполняет команду внутри запущенного контейнера.
+```
 
-docker ps: Просмотр списка запущенных контейнеров.
-docker ps -a: Просмотр списка всех контейнеров (включая остановленные).
-docker rm: Удаляет контейнер.
-docker logs: Просмотр логов контейнера.
+Управление контейнерами:
+
+```bash
+docker rm $(docker ps -aq) # удалит все остановленные контейнеры
+
+docker ps # Просмотр списка запущенных контейнеров.
+docker ps -a #  Просмотр списка всех контейнеров (включая остановленные).
+docker rm # Удаляет контейнер.
+docker logs # Просмотр логов контейнера.
+```
+
 Работа с образами:
 
-docker images: Просмотр списка образов.
-docker pull: Загрузка образа с Docker Hub.
-docker build: Сборка образа из Dockerfile.
-docker rmi: Удаляет образ.
+```bash
+docker images # Просмотр списка образов.
+docker pull # Загрузка образа с Docker Hub.
+docker build # Сборка образа из Dockerfile.
+docker rmi # Удаляет образ.
+```
 
 ## 4- Хранение данных в контейнерах Docker: Руководство с пояснениями
 
