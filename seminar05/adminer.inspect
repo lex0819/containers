@@ -1,0 +1,237 @@
+[
+    {
+        "Id": "08345587accd4cd90454afd649021a7b7b7c8f45298b0e611e5fa4ec65ae4c2b",
+        "Created": "2023-08-23T14:38:25.299908921Z",
+        "Path": "entrypoint.sh",
+        "Args": [
+            "php",
+            "-S",
+            "[::]:8080",
+            "-t",
+            "/var/www/html"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 2608,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-08-23T14:38:26.09509488Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:758aa020a8d631163bc1c94a3a9b545c2e34e45c6c5f38252396f021c20c3637",
+        "ResolvConfPath": "/var/lib/docker/containers/08345587accd4cd90454afd649021a7b7b7c8f45298b0e611e5fa4ec65ae4c2b/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/08345587accd4cd90454afd649021a7b7b7c8f45298b0e611e5fa4ec65ae4c2b/hostname",
+        "HostsPath": "/var/lib/docker/containers/08345587accd4cd90454afd649021a7b7b7c8f45298b0e611e5fa4ec65ae4c2b/hosts",
+        "LogPath": "/var/lib/docker/containers/08345587accd4cd90454afd649021a7b7b7c8f45298b0e611e5fa4ec65ae4c2b/08345587accd4cd90454afd649021a7b7b7c8f45298b0e611e5fa4ec65ae4c2b-json.log",
+        "Name": "/seminar05-adminer-1",
+        "RestartCount": 0,
+        "Driver": "stargz",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "seminar05_default",
+            "PortBindings": {
+                "8080/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "6380"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "always",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "stargz"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "08345587accd",
+            "Domainname": "",
+            "User": "adminer",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "ADMINER_VERSION=4.8.1",
+                "ADMINER_DOWNLOAD_SHA256=2fd7e6d8f987b243ab1839249551f62adce19704c47d3d0c8dd9e57ea5b9c6b3",
+                "ADMINER_COMMIT=1f173e18bdf0be29182e0d67989df56eadea4754"
+            ],
+            "Cmd": [
+                "php",
+                "-S",
+                "[::]:8080",
+                "-t",
+                "/var/www/html"
+            ],
+            "Image": "adminer",
+            "Volumes": null,
+            "WorkingDir": "/var/www/html",
+            "Entrypoint": [
+                "entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "674faa2b2eb53350e0d5c56416ff12e91f685a6787fc5403d207e22ca482da12",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:758aa020a8d631163bc1c94a3a9b545c2e34e45c6c5f38252396f021c20c3637",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "seminar05",
+                "com.docker.compose.project.config_files": "/Users/lex/Desktop/gb/containers/seminar05/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/Users/lex/Desktop/gb/containers/seminar05",
+                "com.docker.compose.service": "adminer",
+                "com.docker.compose.version": "2.19.1"
+            },
+            "StopSignal": "SIGINT"
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "95b8d0bb9b4b33fc069bef10b3063b3a50a468bc7f8a8710cb49ac44620c48fc",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "8080/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "6380"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/95b8d0bb9b4b",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "seminar05_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "seminar05-adminer-1",
+                        "adminer",
+                        "08345587accd"
+                    ],
+                    "NetworkID": "74a011a199540021ac45fd2f2d18043aec3db2e31024bf298ad8f926e6d53385",
+                    "EndpointID": "f3b03da2a762f6492577b76051f807778587180fbb7d61faa0861c57350d4de5",
+                    "Gateway": "172.19.0.1",
+                    "IPAddress": "172.19.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:13:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
